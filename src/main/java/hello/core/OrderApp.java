@@ -23,6 +23,7 @@ public class OrderApp {
         Order order = orderService.createOrder(memberId, "ItemA", 10000);
         System.out.println("order = " + order);
         System.out.println("order = " + order.calculatePrice());
+        System.out.println("order = " + order.calculatePrice());
 
     }
 }
