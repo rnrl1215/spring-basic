@@ -1,9 +1,14 @@
 package hello.core.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemberMemoryRepository implements MemberRepository{
+//component를 선언해 주어 bean을 등록할 필요가없다.
+
+@Component
+public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
 

@@ -1,6 +1,9 @@
 package hello.core.member;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-// OCP 꺠짐 멤버서비스 의존.
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
     //OCP가 깨짐 MemberMemoryRepository 여기에 의존하고
@@ -9,6 +12,7 @@ public class MemberServiceImpl implements MemberService {
     // private final MemberRepository memberRepository = new MemberMemoryRepository();
     private final MemberRepository memberRepository;
 
+    @Autowired //ac.getBean(MemberRepository.class) 이게 자동으로 들어간다고 보면된다.
     public  MemberServiceImpl(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }

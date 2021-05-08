@@ -2,7 +2,7 @@ package hello.core;
 
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
-import hello.core.member.MemberMemoryRepository;
+import hello.core.member.MemoryMemberRepository;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
@@ -41,7 +41,7 @@ public class AppConfig {
     @Bean
     public MemberRepository memberRepository() {
         System.out.println("Call: AppConfig.memberRepository");
-        return new MemberMemoryRepository();
+        return new MemoryMemberRepository();
     }
 
     @Bean
