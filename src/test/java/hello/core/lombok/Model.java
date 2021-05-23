@@ -125,7 +125,7 @@ public class Model {
     */
 
     public static void main(String[] args) {
-        ApplicationContext ac = new AnnotationConfigApplicationContext(modelConfig.class);
+        ApplicationContext ac = new AnnotationConfigApplicationContext(com.skahn.lombok.modelConfig.class);
 
         Model model = ac.getBean("model", Model.class);
         model.setName("TEST23");
