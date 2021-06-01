@@ -1,5 +1,8 @@
 package hello.core.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
 
     private String url;
@@ -35,6 +38,7 @@ public class NetworkClient {
     }
 
     // 빈생성후 초기화
+    @PostConstruct
     public void init() {
         System.out.println("Init");
         connect();
@@ -42,6 +46,7 @@ public class NetworkClient {
     }
 
     //컨테이너가 내려가고 빈 이 죽을때 함수호출
+    @PreDestroy
     public void close() {
         System.out.println("Close");
         disconnect();
