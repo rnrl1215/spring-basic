@@ -72,7 +72,7 @@ public class SingletonWithPrototype1 {
         }
 
         @PostConstruct
-        public void inti() {
+        public void init() {
             System.out.println("PrototypeBean.init" + this);
         }
 

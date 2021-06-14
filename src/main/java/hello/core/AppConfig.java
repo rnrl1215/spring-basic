@@ -33,6 +33,7 @@ public class AppConfig {
     // Key: memberService, value 객체
     @Bean
     public MemberService memberService() {
+
         System.out.println("Call: AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
