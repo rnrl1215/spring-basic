@@ -38,7 +38,7 @@ public class SingletonWithPrototype1 {
 
         ClientBean clientBean2 = ac.getBean(ClientBean.class);
         int count2 = clientBean2.logic();
-        assertThat(count2).isEqualTo(2);
+        assertThat(count2).isEqualTo(1);
     }
 
     // ClientBean 은 싱글톤
